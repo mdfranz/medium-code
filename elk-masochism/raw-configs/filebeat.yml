@@ -1,0 +1,11 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /var/log/*.log
+    - /var/log/squid/*.log
+    - /var/log/filebeat/*
+output.logstash:
+  # The Logstash hosts
+  hosts: ["internal-logstash-1299266159.us-east-2.elb.amazonaws.com:5000"]
+  index: "logstash"
+
