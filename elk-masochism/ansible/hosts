@@ -5,3 +5,6 @@
 [logstash]
 192.168.1.19
 192.168.1.84
+
+[elasticsearch]
+192.168.1.35 ansible_user=ec2-user

@@ -1,0 +1,6 @@
+Tested Versions of 
+
+Filebeat: 5.1.1
+Elasticsearch: 2.3 (AWS)
+Packetbeat: 5.1.1
+Logstash: 1:5.1.1-1
