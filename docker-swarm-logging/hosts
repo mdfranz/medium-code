@@ -1,0 +1,3 @@
+192.168.2.150	ansible_hostname=docker01
+192.168.2.234	ansible_hostname=docker02
+192.168.2.163	ansible_hostname=docker03

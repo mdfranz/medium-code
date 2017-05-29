@@ -1,0 +1,34 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  become_user: root
+
+  tasks:
+  - name: Copy Event over
+    copy:
+      src: files/dockerlog.service
+      dest: /etc/systemd/system/
+
+  - name: Copy Event over
+    copy:
+      src: files/dockerlog-json.service
+      dest: /etc/systemd/system/
+
+
+  - name: Install nmap
+    package:
+      name: nmap
+      state: latest
+
+  - name: Restart Docker logging hack
+    systemd:
+      state: restarted
+      daemon_reload: yes
+      name: dockerlog
+
+  - name: Restart Docker logging hack
+    systemd:
+      state: restarted
+      daemon_reload: yes
+      name: dockerlog-json
+

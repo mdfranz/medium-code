@@ -1,0 +1,17 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  become_user: root
+
+  tasks:
+  - name: Copy Event over
+    copy:
+      src: files/daemon.json
+      dest: /etc/docker/
+
+
+  - name: Restart Docker
+    systemd:
+      state: restarted
+      daemon_reload: yes
+      name: docker

@@ -1,0 +1,12 @@
+[Unit]
+Description=Send Docker logs via Journalctl to Syslog
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/bin/sh -c '/bin/journalctl -u docker.service -o short -f | /usr/bin/ncat -u 192.168.2.247 1514'
+
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
