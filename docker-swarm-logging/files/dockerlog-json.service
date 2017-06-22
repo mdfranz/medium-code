@@ -3,7 +3,7 @@ Description=Send Docker logs via Journalctl to Syslog (JSON)
 
 [Service]
 TimeoutStartSec=0
-ExecStart=/bin/sh -c '/bin/journalctl -u docker.service -o json -f | /usr/bin/ncat 192.168.2.136 1515'
+ExecStart=/bin/sh -c '/bin/journalctl -u docker.service -o json -f | /usr/bin/ncat 192.168.2.168 1515'
 
 Restart=always
 RestartSec=5s

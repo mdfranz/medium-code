@@ -2,4 +2,3 @@
 192.168.2.234	ansible_hostname=docker02
 192.168.2.163	ansible_hostname=docker03
 192.168.2.236	ansible_hostname=docker04
-192.168.2.240	ansible_hostname=docker05
